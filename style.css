@@ -1,0 +1,127 @@
+/* Reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+body {
+  height: 100vh;
+}
+
+/* Variables */
+:root {
+  --clr-primary-600: hsl(47, 88%, 63%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-black: hsl(0, 0%, 7%);
+  --clr-neutral-500: hsl(0, 0%, 50%);
+
+  --fw-regular: 600;
+  --fw-bold: 800;
+}
+
+body {
+  background-color: var(--clr-primary-600);
+  font-family: "Figtree", sans-serif;
+  font-size: 16px;
+
+  display: flex;
+  flex-direction: column;
+}
+.main {
+  flex-grow: 1;
+  display: grid;
+  place-content: center;
+}
+.card {
+  height: 522px;
+  width: 384px;
+  background-color: var(--clr-white);
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  box-shadow: var(--clr-black) 1rem 1rem;
+
+  border: 1px solid var(--clr-black);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.card__img {
+  border-radius: 0.75rem;
+}
+.card__label {
+  font-weight: var(--fw-bold);
+  font-size: 0.9rem;
+  margin-top: 1.5rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  background-color: var(--clr-primary-600);
+}
+.card__publish-date {
+  margin-top: 0.75rem;
+  font-weight: var(--fw-regular);
+  font-size: 0.9rem;
+}
+.card__title {
+  margin: 0.75rem 0;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+.card__title:hover,
+.card__title:focus {
+  color: var(--clr-primary-600);
+}
+
+.card__description {
+  color: var(--clr-neutral-500);
+}
+
+.author {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.author__avatar {
+  height: 2rem;
+  width: 2rem;
+}
+.author__name {
+  font-weight: var(--fw-bold);
+  font-size: 0.9rem;
+}
+
+.footer {
+  align-self: center;
+  color: var(--clr-neutral-500);
+}
+.footer a {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--clr-black);
+}
+.footer a:hover {
+  text-decoration: underline;
+}
